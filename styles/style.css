@@ -1,0 +1,368 @@
+* {
+  margin: 0;
+}
+
+:root {
+  --white: rgb(240, 240, 240);
+  --red: rgb(190, 49, 68);
+  --blue: rgb(69, 86, 125);
+  --gray: rgb(48, 56, 65);
+  --orange: rgb(255, 127, 80);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  background-color: var(--red);
+  z-index: 1;
+}
+
+#navbar > ul {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+
+#navbar > ul > li {
+  list-style-type: none;
+  color: white;
+}
+
+#navbar > ul > li > a {
+  display: inline-block;
+  padding: 20px;
+  color: var(--white);
+  font-size: 22px;
+}
+
+#navbar > ul > li > a:hover {
+  background-color: var(--blue);
+}
+
+#welcome-section {
+  height: calc(100vh - 73px);
+  padding-top: 73px;
+  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+
+#welcome-section > #welcome-texts {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#welcome-section > #welcome-texts > #welcome-title {
+  font-family: "Raleway", sans-serif;
+  color: var(--white);
+  font-size: 60px;
+  font-weight: 700;
+  text-align: center;
+}
+
+#welcome-section > #welcome-texts > #welcome-subtitle {
+  color: var(--red);
+  font-weight: 200;
+  font-size: 30px;
+  font-style: italic;
+  text-align: center;
+}
+
+#projects-section {
+  background-color: var(--blue);
+}
+
+#projects-section > .projects-title {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  display: inline-block;
+  padding: 0 20px 30px 20px;
+  border-bottom: 2px solid var(--white);
+  margin: 110px 0 60px 0;
+}
+
+#projects-section > .projects-title > h2 {
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  font-size: 42px;
+  color: white;
+}
+
+#projects {
+  display: flex;
+  width: 1280px;
+  margin: 0 auto;
+}
+
+#projects > a {
+  flex-basis: 33.33333%;
+  padding: 0 20px;
+}
+
+#projects > a > .project-tile {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 1px 1px 2px rgb(0 0 0 / 50%);
+}
+
+#projects > a > .project-tile > img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#projects > a > .project-tile > .project-name {
+  background-color: var(--gray);
+  box-shadow: 1px 1px 2px rgb(0 0 0 / 50%);
+  padding: 20px 0;
+  color: var(--white);
+  font-size: 20px;
+  text-align: center;
+}
+
+#projects > a > .project-tile > .project-name > p::before {
+  content: "<";
+  margin-right: 10px;
+  margin-left: 9px;
+  color: var(--orange);
+  opacity: 0;
+  transition: 0.1s;
+}
+
+#projects > a > .project-tile > .project-name > p::after {
+  content: "/>";
+  margin-left: 10px;
+}
+
+#projects > a > .project-tile > .project-name > p::before,
+#projects > a > .project-tile > .project-name > p::after {
+  color: var(--orange);
+  opacity: 0;
+  transition: 0.2s;
+}
+
+#projects > a:hover .project-name > p::before,
+#projects > a:hover .project-name > p::after {
+  opacity: 1;
+}
+
+#projects-section > .projects-btn {
+  text-align: center;
+  padding: 60px 0 60px 0;
+}
+
+#projects-section > .projects-btn > a {
+  background-color: var(--gray);
+  border: none;
+  font-size: 19px;
+  padding: 15px 30px;
+  color: var(--white);
+  cursor: pointer;
+  border-radius: 2px;
+  transition: 0.2s;
+}
+
+#projects-section > .projects-btn > a:hover {
+  background-color: var(--red);
+}
+
+#projects-section > .projects-btn > a > .fas {
+  position: relative;
+  left: 10px;
+  transition: 0.2s;
+}
+
+#projects-section > .projects-btn > a:hover .fas {
+  left: 15px;
+}
+
+#contact-section {
+  height: 80vh;
+  background-color: var(--gray);
+}
+
+#contact-section > .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+#contact-section > .contact > .contact-title > h2 {
+  color: var(--white);
+  font-size: 56px;
+}
+
+#contact-section > .contact > .contact-title > h3 {
+  color: var(--white);
+  font-weight: 200;
+  font-style: italic;
+}
+
+#contact-section > .contact > .contact-links {
+  margin-top: 50px;
+}
+
+#contact-section > .contact > .contact-links > ul {
+  padding-inline-start: 0;
+}
+
+#contact-section > .contact > .contact-links > ul > li {
+  display: inline-block;
+  font-size: 24px;
+  cursor: pointer;
+  padding-bottom: 1px;
+}
+
+#contact-section > .contact > .contact-links > ul > li > a {
+  position: relative;
+  top: 0;
+  padding: 0 15px;
+  color: var(--white);
+  transition: 0.5s;
+  text-shadow: 2px 2px 1px #1f1f1f;
+}
+
+@media (min-width: 769px) {
+  #contact-section > .contact > .contact-links > ul > li:hover a {
+    top: 15px;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(20vh - 73px);
+  min-height: 70px;
+  background-color: var(--gray);
+  border-top: 5px solid var(--red);
+}
+
+footer > p {
+  color: var(--white);
+  font-size: 18px;
+}
+
+@media (max-width: 850px) {
+  #navbar > ul {
+    margin-right: 0;
+    justify-content: center;
+  }
+
+  #navbar > ul > li > a {
+    font-size: 16px;
+  }
+
+  #welcome-section > #welcome-texts > #welcome-title {
+    font-size: 42px;
+    text-align: center;
+  }
+
+  #welcome-section > #welcome-texts > #welcome-subtitle {
+    font-size: 21px;
+    text-align: center;
+  }
+
+  #projects-section > .projects-title {
+    width: 90vw;
+    margin: 95px 0 60px 0;
+  }
+
+  #projects-section > .projects-title > h2 {
+    font-size: 37px;
+  }
+
+  #projects {
+    flex-direction: column;
+    width: 95vw;
+  }
+
+  #projects > a {
+    margin-bottom: 40px;
+  }
+
+  #projects > a > .project-tile {
+    margin-right: 0;
+  }
+
+  #projects > a > .project-tile > .project-name {
+    font-size: 18px;
+  }
+
+  #projects-section > .projects-btn {
+    padding: 14px 0 60px 0;
+  }
+
+  #contact-section > .contact > .contact-title > h2 {
+    font-size: 46px;
+  }
+
+  #contact-section > .contact > .contact-links > ul > li {
+    font-size: 16px;
+  }
+
+  footer {
+    height: calc(22vh - 73px);
+  }
+
+  footer > p {
+    font-size: 10px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  #projects > a {
+    padding: 0 10px;
+  }
+
+  #projects > a > .project-tile {
+    margin: 0;
+  }
+
+  #projects > a > .project-tile > .project-name {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1280px) {
+  #projects {
+    width: 95vw;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 1024px) {
+  #welcome-section > #welcome-texts {
+    top: calc(50% + 35px);
+  }
+
+  footer {
+    height: 20vh;
+  }
+}
